@@ -37,7 +37,7 @@ export const BookList: React.FC<Props> = ({ onOpenBook }) => {
     return (
         <>
             <h2 style={{ marginBottom: '1rem', fontFamily: 'Crimson Pro, serif', fontSize: '24px' }}>
-                Server Books ({serverBooks.length})
+                My Books ({serverBooks.length})
             </h2>
             <div className="library-grid">
                 {serverBooks.map((serverBook) => {

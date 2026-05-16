@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 public class Bookmark {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "bigint")
     private Long id;
 
     private Integer position;
@@ -21,8 +20,7 @@ public class Bookmark {
     @JoinColumn(name = "book_id")
     private Book book;
 
-    @Column(name = "created_at", nullable = false, updatable = false,
-            columnDefinition = "timestamp")
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @PrePersist

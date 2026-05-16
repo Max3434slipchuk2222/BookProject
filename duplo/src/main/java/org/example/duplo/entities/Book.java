@@ -18,11 +18,10 @@ public class Book {
 
     private String author;
 
-    @Column(columnDefinition = "text")
+    @Lob
     private String text;
 
-    @Column(name = "created_at", nullable = false, updatable = false,
-            columnDefinition = "timestamp")
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @PrePersist
